@@ -1,0 +1,34 @@
+﻿@page
+@model EnvironmentApplication.Pages.DetailsModel
+@{
+}
+
+<div class="w-25">
+    <label asp-for="Taxpayer!.FirstName" class="text-primary"></label>
+    <input asp-for="Taxpayer!.FirstName" class="form-control mb-3 me-4" />
+
+    <label asp-for="Taxpayer!.LastName" class="text-primary"></label>
+    <input asp-for="Taxpayer!.LastName" class="form-control mb-3 me-4" />
+
+    <label asp-for="Taxpayer!.Ssn" class="text-primary"></label>
+    <input asp-for="Taxpayer!.Ssn" class="form-control mb-3 me-4" />
+
+    <label asp-for="Taxpayer!.Pin" class="text-primary"></label>
+    <input asp-for="Taxpayer!.Pin" class="form-control mb-3 me-4" />
+    
+    <label asp-for="Taxpayer!.Category.Description" class="text-primary"></label>
+    <input asp-for="Taxpayer!.Category.Description" class="form-control mb-3 me-4" />
+    
+    <label asp-for="Taxpayer!.Added" class="text-primary"></label>
+    <input asp-for="Taxpayer!.Added!.Value" type="text" class="form-control mb-3 me-4" />
+
+</div>
+<form method="post">
+    <div class="row">
+        <div class="col-auto">
+            <button class="btn btn-outline-primary">Home</button>
+        </div>
+        
+    </div>
+</form>
+

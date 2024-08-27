@@ -1,0 +1,51 @@
+﻿@page "{lang:=en}"
+@inject IWebHostEnvironment HostingEnv
+@model EnvironmentApplication.Pages.IndexModel
+
+
+@{
+    ViewData["Title"] = "Home";
+}
+
+@*<link rel="stylesheet" href="~/@(nameof(WebApplication1)).styles.css" />*@
+
+<div class="container border border-dark border-1 mt-4 h-100">
+    <div class="row">
+
+        <div style="background-color: #0f506f" class="text-white text-center p-2">
+            Welcome
+            <a id="SP" href="#" class="float-end btn btn btn-sm customLangButton btn-success">Español</a>
+        </div>
+
+    </div>
+
+</div>
+
+
+@section Scripts
+    {
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            let navLink = document.querySelector('#mainPage');
+            navLink.setAttribute('class', 'active');
+        });
+
+        $('#SP').click(function (event) {
+
+            var timeout = 3000;
+            var dialog = bootbox.dialog(
+                {
+                    message: '<p class="text-center mb-0 bi bi-exclamation-circle font-weight-bold fs-3"> This is not implemented</p>',
+                    centerVertical: true,
+                    closeButton: false
+                });
+
+            setTimeout(function () { dialog.modal('hide'); }, timeout);
+            dialog.modal('hide');
+
+        });
+
+    </script>
+}
+
+
